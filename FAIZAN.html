@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Image URLs</title>
+</head>
+<body>
+
+<!-- Images -->
+<img src="blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e1">
+<img src="blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e1">
+<!-- Add more img elements as needed -->
+
+<!-- Button to open all URLs -->
+<button onclick="openAllImages()">Open All URLs</button>
+
+<script>
+function openAllImages() {
+  // Array of image URLs
+  var urls = [
+  "blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e1",
+                    "blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e1",
+                    "blob:https://docs.google.com/7dcf050a-a107-4669-a548-944d7e2ef9b1",
+                    "blob:https://docs.google.com/d03302ff-f4f5-49e6-b036-8610e274d673",
+                    "blob:https://docs.google.com/a0af3760-d8e0-4a6a-adbd-9e3bc41b3550",
+                    "blob:https://docs.google.com/5d0ddd42-60e2-45b3-beae-487f81d476d6",
+                    "blob:https://docs.google.com/a87d3baa-048e-46b5-857c-b94fda4cb9f3",
+                    "blob:https://docs.google.com/8636ade3-2d50-4a48-b152-302f3697fbac",
+                    "blob:https://docs.google.com/7823d04c-fb96-464f-847b-f2ece2e8d505",
+                    "blob:https://docs.google.com/097c08ef-8e09-49ba-82c4-01e735cdd28d",
+                    "blob:https://docs.google.com/47dced82-7afb-4ac8-b26b-5d12889a63fc",
+                    "blob:https://docs.google.com/fb3f9a4f-94d5-4634-84af-cbf84e98b867",
+                    "blob:https://docs.google.com/5b55e6d1-e6e9-4ed3-94ac-f35c4a8ec51c",
+                    "blob:https://docs.google.com/f8bf65f9-26f4-4850-8757-d5f5ba120bff",
+                    "blob:https://docs.google.com/5d418337-40a4-436e-b8b9-f37929cc19f3",
+                    "blob:https://docs.google.com/cd9bf28d-2240-4010-94a2-c0ce6a07fb30",
+                    "blob:https://docs.google.com/dc2d08ff-93e4-4279-94fe-f3adaf7baa49",
+                    "blob:https://docs.google.com/5c79c8d6-6759-4c3c-a257-0d4a06acd183",
+                    "blob:https://docs.google.com/1ada1a80-d926-47b1-9159-a5b71b2af79c",
+                    "blob:https://docs.google.com/2b0cfb2d-5ad7-4e44-962f-15e9adce8622",
+                    "blob:https://docs.google.com/f78075f8-9baa-4c2d-94e5-5a2201714eea",
+                    "blob:https://docs.google.com/78b8f592-c9bd-48be-bcea-56bcfea26751",
+                    "blob:https://docs.google.com/ce702a60-305f-4354-a559-b3ba367f0497",
+                    "blob:https://docs.google.com/ed7dfed3-a9eb-4cd8-bb88-fe2058d976e2",
+                    "blob:https://docs.google.com/ed7dfed3-a9eb-4cd8-bb88-fe2058d976e2",
+                    "blob:https://docs.google.com/ed7dfed3-a9eb-4cd8-bb88-fe2058d976e2",
+                    "blob:https://docs.google.com/80082a82-a29e-407d-8d3d-942259db8159",
+                    "blob:https://docs.google.com/70b9616d-8b52-4bef-8c08-b7c08a3d3fa2",
+                    "blob:https://docs.google.com/07da5d0e-648d-4aba-821f-6c4cf676b124",
+                    "blob:https://docs.google.com/7a99468c-d392-40c8-87da-d658426f96ad",
+                    "blob:https://docs.google.com/6725d913-094a-49ab-90b9-6f38083cf282",
+                    "blob:https://docs.google.com/cb96429d-e1f6-4e6b-97c1-09a658b5b987",
+                    "blob:https://docs.google.com/9bff0621-4a4b-4403-bb54-acdadfc8eaa5",
+                    "blob:https://docs.google.com/67c1e564-ee0b-4d51-a97b-3d05462fda25",
+                    "blob:https://docs.google.com/67c1e564-ee0b-4d51-a97b-3d05462fda25",
+                    "blob:https://docs.google.com/67c1e564-ee0b-4d51-a97b-3d05462fda25",
+                    "blob:https://docs.google.com/67c1e564-ee0b-4d51-a97b-3d05462fda25",
+                    "blob:https://docs.google.com/f9a7b9d7-11e4-4842-94b0-1f3f455568c1",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/d00d8275-0da9-4254-af3a-6468649d8e86",
+                    "blob:https://docs.google.com/24de7206-fd07-4c77-b876-986112dd0292",
+                    "blob:https://docs.google.com/d63cc036-69e7-4f28-a744-b0b2828a9e21",
+                    "blob:https://docs.google.com/fc5c06e0-5d8b-4a97-a9b6-1d9c31f57817",
+                    "blob:https://docs.google.com/bd14bef1-d6aa-4717-b26b-b248c513bc9c",
+                    "blob:https://docs.google.com/86f54ab4-2a5f-4396-ab98-b5a0a2ef6130",
+                    "blob:https://docs.google.com/cf22262e-c736-42cf-b92f-c344949d1d24",
+                    "blob:https://docs.google.com/20e88640-d041-402e-aa9f-dc681adef0ea",
+                    "blob:https://docs.google.com/20e88640-d041-402e-aa9f-dc681adef0ea",
+                    "blob:https://docs.google.com/86b2bb0c-d24d-490c-8ebe-887213885f65",
+                    "blob:https://docs.google.com/20e88640-d041-402e-aa9f-dc681adef0ea",
+                    "blob:https://docs.google.com/d72a27c0-5c20-431e-849d-82b83a656335",
+                    "blob:https://docs.google.com/25004581-24aa-4b4c-86cd-72a0d22772a2",
+                    "blob:https://docs.google.com/065d07cd-07e4-4d4a-8d63-be9156072087",
+                    "blob:https://docs.google.com/d94efebc-b533-4657-bd9e-e797abc72477",
+                    "blob:https://docs.google.com/b9b8ac6f-f148-445d-a341-38304d52f7d9",
+                    "blob:https://docs.google.com/068a171f-8276-4ec0-afb1-3127278a19b3",
+                    "blob:https://docs.google.com/5f28f9d8-e90b-4724-8c86-5838f292a5c7",
+                    "blob:https://docs.google.com/5a69c0c9-f15a-4b33-9423-e8ebe6e27b08",
+                    "blob:https://docs.google.com/d227a7a2-3613-431e-867b-d4e197c6aa3f",
+                    "blob:https://docs.google.com/d227a7a2-3613-431e-867b-d4e197c6aa3f",
+                    "blob:https://docs.google.com/d227a7a2-3613-431e-867b-d4e197c6aa3f",
+                    "blob:https://docs.google.com/d227a7a2-3613-431e-867b-d4e197c6aa3f",
+                    "blob:https://docs.google.com/e08a767a-118a-4fb3-b25d-f3380fd3666a",
+                    "blob:https://docs.google.com/8fde8462-2dc1-4237-9fd0-dfc67d8dac9a",
+                    "blob:https://docs.google.com/8fde8462-2dc1-4237-9fd0-dfc67d8dac9a",
+                    "blob:https://docs.google.com/45ac87fe-526d-4697-bd97-6c3d9e6e2e6a",
+                    "blob:https://docs.google.com/df552ff7-3315-408a-be8a-9b05d94dd4ed",
+                    "blob:https://docs.google.com/df552ff7-3315-408a-be8a-9b05d94dd4ed",
+                    "blob:https://docs.google.com/df552ff7-3315-408a-be8a-9b05d94dd4ed",
+                    "blob:https://docs.google.com/df552ff7-3315-408a-be8a-9b05d94dd4ed",
+                    "blob:https://docs.google.com/2b3b1096-80ba-4cbe-a421-eac71626c091",
+                    "blob:https://docs.google.com/41d72561-6f1f-4499-90bb-601f713f9f12",
+                    "blob:https://docs.google.com/41d72561-6f1f-4499-90bb-601f713f9f12",
+                    "blob:https://docs.google.com/41d72561-6f1f-4499-90bb-601f713f9f12",
+                    "blob:https://docs.google.com/41d72561-6f1f-4499-90bb-601f713f9f12",
+                    "blob:https://docs.google.com/d8765c81-8ba5-495e-8951-f81eb3f51e65",
+                    "blob:https://docs.google.com/cd7409e4-0a6e-4a94-8812-21772dd63533",
+                    "blob:https://docs.google.com/cd7409e4-0a6e-4a94-8812-21772dd63533",
+                    "blob:https://docs.google.com/cd7409e4-0a6e-4a94-8812-21772dd63533",
+                    "blob:https://docs.google.com/cd7409e4-0a6e-4a94-8812-21772dd63533",
+                    "blob:https://docs.google.com/a85d3396-e397-4567-83aa-0727f2d194c1",
+                    "blob:https://docs.google.com/d62f4bef-f58f-4ebf-b485-f8d0087d034a",
+                    "blob:https://docs.google.com/aeee7a27-545d-4458-929e-ad30b811c5fa",
+                    "blob:https://docs.google.com/3af1d4df-62b2-44df-a3ff-f01c87b0416f",
+                    "blob:https://docs.google.com/19025b22-e9de-467c-a8f5-048f0bf8fbb4",
+                    "blob:https://docs.google.com/1b168d2c-410c-4a61-8e5c-ea725eba0c07",
+                    "blob:https://docs.google.com/73b93c0f-d667-4a14-980b-b3e69f0a6b4b",
+                    "blob:https://docs.google.com/2d8508f3-c463-4d1e-8b31-527c4c12f45e",
+                    "blob:https://docs.google.com/76bd1baa-09be-4314-ba98-1f3253a2dd0b",
+                    "blob:https://docs.google.com/fb68c30c-44f3-4190-81db-a4b6a2f15716",
+                    "blob:https://docs.google.com/e64fba89-6de8-45d3-81fe-5dacf4c59b87",
+                    "blob:https://docs.google.com/c850631f-97ce-4b7c-ad75-aba4490dc2e7",
+                    "blob:https://docs.google.com/562fe1ee-5348-41ba-ab8f-85bbd95cacb8",
+                    "blob:https://docs.google.com/21f60b61-0577-4fae-a0fd-f0502376fa81",
+                    "blob:https://docs.google.com/2f768673-7c88-4015-bf19-50e91894288b",
+                    "blob:https://docs.google.com/f8cd524b-dabc-4dd8-8282-6959d57482ad",
+                    "blob:https://docs.google.com/e673739d-b151-4802-a4d0-c2b222ab520e",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/f185e11f-b36e-4502-851b-6b719dd9a1c0",
+                    "blob:https://docs.google.com/d00d8275-0da9-4254-af3a-6468649d8e86",
+                    "blob:https://docs.google.com/d62f4bef-f58f-4ebf-b485-f8d0087d034a",
+                    "blob:https://docs.google.com/aeee7a27-545d-4458-929e-ad30b811c5fa",
+                    "blob:https://docs.google.com/3af1d4df-62b2-44df-a3ff-f01c87b0416f",
+                    "blob:https://docs.google.com/19025b22-e9de-467c-a8f5-048f0bf8fbb4",
+                    "blob:https://docs.google.com/1b168d2c-410c-4a61-8e5c-ea725eba0c07",
+                    "blob:https://docs.google.com/73b93c0f-d667-4a14-980b-b3e69f0a6b4b",
+                    "blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e1",
+                    "blob:https://docs.google.com/8b93bdc9-6ea2-4107-9651-4bcb610417e"
+    // Add more URLs as needed
+  ];
+  
+  // Loop through each URL and open in a new tab
+  urls.forEach(function(url) {
+    window.open(url);
+  });
+}
+</script>
+
+</body>
+</html>
+
